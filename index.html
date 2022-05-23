@@ -3,6 +3,9 @@
     <meta charset="UTF-8">
       <title>Bachata</title>
       <link rel="stylesheet" href="css/style.css">
+      <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+      <script src="js/jquery-1.10.1.min.js"></script>
+
 </head>
 <body>
 <header class="header">
@@ -11,22 +14,45 @@
             <p>You will love bachata!!</p>
         </a>
     </div>
-        <div class="header-a">
-              <a href="#" alt="HOME">HOME</a>
-          </div>
-            <div class="header-a">
-              <a href="#" alt="WHAT IS BACHATA?">WHAT IS BACHATA?</a>
-          </div>
-          <div class="header-a">
-              <a href="#" alt="IS IT DIFFICULT?">IS IT DIFFICULT?</a>
-          </div>
-          <div class="header-a">
-              <a href="#" alt="CONTACT">CONTACT</a>
-          </div>
+<ul class="accordin">
+    <li>
+        <h2><a href="#contact" class="link">Contact</a></h2>
+        <div class="content">
+
+        </div>
+    </li>
+    <li>
+        <h2>Home</h2>
+        <div class="content">
+            <p>Welcome</p>
+        </div>
+    </li>
+    <li>
+        <h2>Why is so dificult?</h2>
+        <div class="content">
+            <p>Why do you think it is s difficult? what you need to do is to listen the rism and follow it</p>
+        </div>
+    </li>
+    <li>
+        <h2>What is Bachata?</h2>
+        <div class="content">
+           <p>It comes from south america. it represents our hispanic soul!!!</p>
+        </div>
+    </li>
+</ul>
 </header>
 <section class="bachata-love">
 </section>
-<<section class="yellow">
+<section class="slide">
+        <ul class="container">
+          <li class="current"><a href="#"><img src="images/img_3.png" width="100%" height="100%" ></a></li>
+          <li><img src="images/agua.jpg" width="100%" height="100%" alt=""></li>
+          <li><a href="#"><img src="images/love.jpg" width="100%" height="100%" alt=""></a></li>
+        </ul>
+        <a href="#" class="prev">Prev</a>
+        <a href="#" class="next">Next</a>
+</section>
+<section class="yellow">
     <div calss="bachata-eventy">
         <p class="bachata-anunce">
             we have many events to enjoy at my home
@@ -41,8 +67,9 @@
                 saturday From 20:00 - End
             </p>
         </div>
+    </div>
 </section>
-<section class="bachata-ll">
+<section class="bachata-ll" id="contact" data-offsettop="16">
      <h2 class="bachata-contact">CONTACT</h2>
       <form class="contact-form">
          <input type="text" name="name" placeholder="NAME">

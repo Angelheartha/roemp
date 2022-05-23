@@ -5,11 +5,12 @@ font-size:62.5%;
 }
 
 *, *::before, *::after{
-box-sizing:border-box;
+box-sizing:border-box;41
 }
 
+
 body{
-text-align:center;
+align:center;
 font-size:1.4rem;
 font-family:Raleway, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
@@ -20,12 +21,12 @@ font-family:Raleway, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 background-color:transparent repeat-x;
 width:100%;
 table-layout:fixed;
-
 position:fixed;
 }
 
-.header-a{
-margin:10px 30px 10px;
+
+
+.header-a a{
 display:inline-block;
 text-align:center;
 decoration:none;
@@ -34,19 +35,25 @@ width:200px;
 padding:20px;
 font-size:1.2rem;
 color:#fff;
-border-radius:30px;
+border-radius:50px;
 transition:0.15s;
 cursor:pointer;
+float:right;
+
 }
 
-.header-a:hover{
+
+.header-a a:hover{
 background-color:#4b0082;
 color:#fff;
 }
 
+
+
 .header .header-b{
 transition:0.15s;
 height:65px;
+
 }
 
 .header .header-b a{
@@ -96,9 +103,8 @@ text-align:center;
 background-image:url('../images/black.jpg');
 background-repeat:no-repeat;
 background-size:cover;
-width:auto;
-height:100%;
 width:100%;
+height:100%;
 }
 
 .yellow{
@@ -106,9 +112,9 @@ wide:100%;
 background-image:url('../images/img.png');
 background-repeat:no-repeat;
 background-size:cover;
-width:auto;
-height:100%;
 width:100%;
+height:100%;
+
 }
 
 .bachata-love{
@@ -116,19 +122,36 @@ wide:100%;
 background-image:url('../images/bachta.jpg');
 background-repeat:no-repeat;
 background-size:cover;
-width:auto;
-height:100%;
 width:100%;
+height:100%;
 }
+
 
 .footer{
 padding:12px 0;
 font-size:1.3rem;
+background-position:100% 100%;
 }
+
+.bachata-contact{
+color:white;
+margin-top:40px;
+font-weight:bold;
+font-size:90px;
+text-align:center;
+}
+
+.contact-form{
+display:none;
+}
+
 
 .contact{
 padding:80px 0 150px;
+font-size:40px;
+font-weight:normal;
 }
+
 
 .contact-form{
 width:50%;
@@ -173,10 +196,15 @@ background-color:rgba(255,255,255,0.05);
 box-shadow:0 0 8px rgba(255,255,255,0.5)inset;
 }
 
+
 .bachata-anunce{
-font-size:5rem;
+padding-top:40px;
+font-size:4rem;
 font-weight:normal;
+text-align:center;
+font-style:italic;
 }
+
 
 .bachata-event{
 display:table;
@@ -187,9 +215,145 @@ padding:px;
 
 .bachata-events{
 display:table-cell;
-border:4px solid black;
+border:5px solid black;
 vertical-align:middle;
 font-size:2rem;
 line-height:5px;
-
+text-align:center;
+font-weight:normal;
+font-style:italic;
 }
+
+.accordin{
+text-align:center;
+background-color:black;
+background-color:transparent;
+}
+
+.accordin>li{
+display:inline;
+float:right;
+cursor:pointer;
+margin:0 0 5px 0;
+padding:25px 10px;
+border-radius:5px;
+width:200px;
+padding:20px;
+font-size:1.2rem;
+color:#fff;
+border-radius:50px;
+transition:0.15s;
+cursor:pointer;
+background-color:transparent;
+background-position:bottom center;
+background-repeat:no-repeat;
+}
+
+.accordin>li:hover{
+background-color:#4b0082;
+}
+
+.accordin>li>h2{
+font-weight:normal;
+}
+
+.accordin>li .content{
+display:none;
+}
+
+.accordin>li.expanded{
+background-color:black;
+}
+
+.accordin>li.expanded>h2{
+font-weight:bold;
+}
+
+.accordin>li.expanded .content{
+margin:10px 0 0 0;
+padding:10px 0 0 0;
+border-top:solid 1px #fff;
+}
+
+.slide{
+position:relative;
+margin:0 auto;
+max-width:960px;
+}
+
+.slide img{
+max-width:100%;
+}
+
+.slide>.container{
+position:relative;
+overflow:hidden;
+margin:0;
+padding:0;
+list-style:none;
+}
+
+.slide>.container>li{
+position:absolute;
+z-index:0;
+top:0;
+left:0;
+opacity:0;
+}
+
+.slide> .container >li.current{
+position:relative;
+z-index:1;
+opacity:1;
+}
+
+.slide a.prev,
+.slide a.next{
+position:absolute;
+display:block;
+top:45%;
+width:40px;
+height:40px;
+text-indent:-5000px;
+z-index:10;
+background:url(../images/m.jpg) 100% 100% no-repeat;
+background-color:black;
+}
+
+.slide a.prev{
+left:0;
+}
+
+.slide a.next{
+right:0;
+}
+
+.accordin>li h2 a{
+text-decoration:none;
+}
+
+
+
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+      <script>
+     $(document).ready(function(){
+       $('.slider').bxSlider();
+     });
+      </script>
+
+
+
+<div class="header-a">
+              <a href="#" data-tabit="1" >CONTACT</a>
+        </div>
+         <div class="header-a">
+              <a href="#" data-tabit="2" >HOME</a>
+        </div>
+        <div class="header-a">
+              <a href="#" data-tabit="3">WHAT IS BACHATA?</a>
+        </div>
+        <div class="header-a">
+              <a href="#" data-tabit="4">What is so difficult?</a>
+        </div>
